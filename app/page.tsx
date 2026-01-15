@@ -9,20 +9,20 @@ export default function Home() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-[#3d2817] text-white overflow-hidden">
+      <section className="relative bg-[#2d1810] text-white overflow-hidden">
         {/* Animated Grid Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#5c3d2e] via-[#3d2817] to-[#2d1810]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3d2817] via-[#2d1810] to-[#1a0f08]" />
 
           {/* Grid Pattern */}
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:50px_50px]" />
 
           {/* Animated Gradient Orbs */}
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-700/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-700/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-800/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
 
           {/* Spotlight Effect */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(61,40,23,0.5)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(45,24,16,0.5)_100%)]" />
         </div>
 
         {/* Content */}
@@ -89,7 +89,7 @@ export default function Home() {
               <div className="relative">
                 {/* Main Shoe Image with Glow */}
                 <div className="relative z-10 animate-float">
-                  <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-orange-700/20 blur-3xl" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-amber-700/20 to-orange-800/20 blur-3xl" />
                   <img
                     src="/hero-shoe.jpg"
                     alt="Premium cipela"
@@ -98,8 +98,8 @@ export default function Home() {
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute -top-10 -right-10 w-72 h-72 bg-gradient-to-br from-amber-600/20 to-orange-700/20 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute -bottom-10 -left-10 w-96 h-96 bg-gradient-to-tr from-orange-700/20 to-amber-800/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute -top-10 -right-10 w-72 h-72 bg-gradient-to-br from-amber-700/20 to-orange-800/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-10 -left-10 w-96 h-96 bg-gradient-to-tr from-orange-800/20 to-amber-900/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
               </div>
             </div>
           </div>
