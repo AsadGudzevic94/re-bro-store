@@ -82,7 +82,7 @@ export default function CheckoutPage() {
 
     try {
       await emailjs.send(
-        "service_ti3wvlp",
+        "service_cercg5u",
         "template_x007xh2",
         templateParams,
         "5WiXOhqiN3g-48Pcy"
