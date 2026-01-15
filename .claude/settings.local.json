@@ -3,7 +3,17 @@
     "allow": [
       "Bash(npm run dev:*)",
       "Bash(timeout:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git config:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(nslookup:*)",
+      "Bash(git add:*)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\asadg\\OneDrive\\Pictures"
     ]
   }
 }
