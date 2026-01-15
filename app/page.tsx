@@ -108,7 +108,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
           Kategorije
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 gap-4 sm:gap-8 max-w-5xl mx-auto">
           <Link
             href="/products?category=leto"
             className="relative group overflow-hidden rounded-lg shadow-lg h-64"
