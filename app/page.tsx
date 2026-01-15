@@ -9,87 +9,104 @@ export default function Home() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden min-h-[600px] flex items-center">
-        {/* Animated Background Shoes */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Shoe 1 - Top Right */}
-          <div className="absolute -top-20 right-[10%] opacity-30 animate-float">
-            <img
-              src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&q=80"
-              alt=""
-              className="w-96 h-96 object-contain transform rotate-12"
-            />
-          </div>
+      <section className="relative bg-black text-white overflow-hidden">
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
 
-          {/* Shoe 2 - Middle Left */}
-          <div className="absolute top-1/4 -left-32 opacity-25 animate-float-delayed">
-            <img
-              src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600&q=80"
-              alt=""
-              className="w-80 h-80 object-contain transform -rotate-45"
-            />
-          </div>
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:50px_50px]" />
 
-          {/* Shoe 3 - Bottom Center */}
-          <div className="absolute bottom-0 right-[20%] opacity-25 animate-float-slow">
-            <img
-              src="https://images.unsplash.com/photo-1605733513597-8c034b65e3e8?w=600&q=80"
-              alt=""
-              className="w-72 h-72 object-contain transform rotate-[25deg]"
-            />
-          </div>
+          {/* Animated Gradient Orbs */}
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
 
-          {/* Shoe 4 - Top Left Background */}
-          <div className="absolute top-10 left-[15%] opacity-15 animate-float-slow">
-            <img
-              src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&q=80"
-              alt=""
-              className="w-64 h-64 object-contain transform -rotate-12"
-            />
-          </div>
-
-          {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/50 to-gray-900/80" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-900/70" />
+          {/* Spotlight Effect */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 w-full">
-          <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-100 to-gray-300 animate-gradient">
-                Re-Bro
-              </span>
-            </h1>
-            <p className="text-3xl md:text-4xl text-gray-200 mb-4 font-light">
-              Kvalitetna obuća za savremenog muškarca
-            </p>
-            <p className="text-xl text-gray-400 mb-10 max-w-xl">
-              Pronađite svoj stil. Veličine 40-46.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/products"
-                className="inline-block bg-white text-gray-900 px-10 py-5 rounded-xl font-bold hover:bg-gray-100 transition-all transform hover:scale-105 hover:shadow-2xl text-center text-lg"
-              >
-                Pogledaj kolekciju
-              </Link>
-              <Link
-                href="/products?category=elegantne"
-                className="inline-block border-2 border-white text-white px-10 py-5 rounded-xl font-bold hover:bg-white hover:text-gray-900 transition-all transform hover:scale-105 text-center text-lg backdrop-blur-sm"
-              >
-                Elegantne cipele
-              </Link>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-8">
+              <div className="inline-block">
+                <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
+                  Premium Muška Obuća
+                </span>
+              </div>
+
+              <h1 className="text-6xl md:text-8xl font-black leading-none">
+                <span className="block bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                  Re-Bro
+                </span>
+              </h1>
+
+              <p className="text-2xl md:text-3xl text-gray-300 font-light max-w-2xl">
+                Kvalitetna obuća za savremenog muškarca
+              </p>
+
+              <p className="text-lg text-gray-400 max-w-xl">
+                Pronađite svoj stil. Veličine 40-46. Besplatna dostava za sve porudžbine.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Link
+                  href="/products"
+                  className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-black bg-white rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-white/20"
+                >
+                  <span className="relative z-10">Pogledaj kolekciju</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+
+                <Link
+                  href="/products?category=elegantne"
+                  className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white border-2 border-white/30 rounded-xl backdrop-blur-sm hover:border-white hover:bg-white/10 transition-all hover:scale-105"
+                >
+                  Elegantne cipele
+                </Link>
+              </div>
+
+              {/* Stats */}
+              <div className="flex gap-8 pt-8 border-t border-white/10">
+                <div>
+                  <div className="text-3xl font-bold">100+</div>
+                  <div className="text-sm text-gray-400">Modela</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold">7</div>
+                  <div className="text-sm text-gray-400">Veličina</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold">24/7</div>
+                  <div className="text-sm text-gray-400">Podrška</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Side */}
+            <div className="relative hidden lg:block">
+              <div className="relative">
+                {/* Main Shoe Image with Glow */}
+                <div className="relative z-10 animate-float">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl" />
+                  <img
+                    src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=800&q=80"
+                    alt="Premium cipela"
+                    className="relative w-full max-w-2xl drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+
+                {/* Decorative Elements */}
+                <div className="absolute -top-10 -right-10 w-72 h-72 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-10 -left-10 w-96 h-96 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Animated Particles */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-[20%] w-2 h-2 bg-white/20 rounded-full animate-ping" />
-          <div className="absolute top-40 right-[30%] w-3 h-3 bg-white/10 rounded-full animate-pulse" />
-          <div className="absolute bottom-32 left-[40%] w-2 h-2 bg-white/15 rounded-full animate-ping" style={{ animationDelay: '1s' }} />
-        </div>
+        {/* Bottom Fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent" />
       </section>
 
       {/* Categories Section */}

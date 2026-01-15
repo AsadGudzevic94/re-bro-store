@@ -25,58 +25,22 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Floating animations for hero shoes */
+/* Grid pattern background */
+.bg-grid-white\/\[0\.05\] {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Floating animation */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px) scale(1);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-30px) scale(1.05);
-  }
-}
-
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px) scale(1) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(-40px) scale(1.08) rotate(-45deg);
-  }
-}
-
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.03);
-  }
-}
-
-@keyframes gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    transform: translateY(-20px);
   }
 }
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 7s ease-in-out infinite;
-  animation-delay: 1s;
-}
-
-.animate-float-slow {
-  animation: float-slow 8s ease-in-out infinite;
-  animation-delay: 0.5s;
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
 }
