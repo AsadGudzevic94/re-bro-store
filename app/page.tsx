@@ -9,61 +9,86 @@ export default function Home() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div className="z-10">
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                  Re-Bro
-                </span>
-              </h1>
-              <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-                Kvalitetna obuća za savremenog muškarca
-              </p>
-              <p className="text-lg text-gray-400 mb-8">
-                Pronađite svoj stil. Veličine 40-46.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/products"
-                  className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 text-center shadow-lg"
-                >
-                  Pogledaj kolekciju
-                </Link>
-                <Link
-                  href="/products?category=elegantne"
-                  className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-gray-900 transition-all transform hover:scale-105 text-center"
-                >
-                  Elegantne cipele
-                </Link>
-              </div>
-            </div>
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden min-h-[600px] flex items-center">
+        {/* Animated Background Shoes */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Shoe 1 - Top Right */}
+          <div className="absolute -top-20 right-[10%] opacity-10 animate-float">
+            <img
+              src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&q=80"
+              alt=""
+              className="w-96 h-96 object-contain transform rotate-12"
+            />
+          </div>
 
-            {/* Animated Shoe Image */}
-            <div className="relative hidden lg:block">
-              <div className="relative animate-float">
-                <img
-                  src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=800&q=80"
-                  alt="Elegantna muška cipela"
-                  className="w-full max-w-lg mx-auto drop-shadow-2xl transform hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent rounded-lg" />
-              </div>
+          {/* Shoe 2 - Middle Left */}
+          <div className="absolute top-1/4 -left-32 opacity-10 animate-float-delayed">
+            <img
+              src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600&q=80"
+              alt=""
+              className="w-80 h-80 object-contain transform -rotate-45"
+            />
+          </div>
 
-              {/* Decorative Elements */}
-              <div className="absolute -top-10 -right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse" />
-              <div className="absolute -bottom-10 -left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000" />
+          {/* Shoe 3 - Bottom Center */}
+          <div className="absolute bottom-0 right-[20%] opacity-10 animate-float-slow">
+            <img
+              src="https://images.unsplash.com/photo-1605733513597-8c034b65e3e8?w=600&q=80"
+              alt=""
+              className="w-72 h-72 object-contain transform rotate-[25deg]"
+            />
+          </div>
+
+          {/* Shoe 4 - Top Left Background */}
+          <div className="absolute top-10 left-[15%] opacity-5 animate-float-slow">
+            <img
+              src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&q=80"
+              alt=""
+              className="w-64 h-64 object-contain transform -rotate-12"
+            />
+          </div>
+
+          {/* Gradient Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/80" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 w-full">
+          <div className="max-w-3xl">
+            <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-100 to-gray-300 animate-gradient">
+                Re-Bro
+              </span>
+            </h1>
+            <p className="text-3xl md:text-4xl text-gray-200 mb-4 font-light">
+              Kvalitetna obuća za savremenog muškarca
+            </p>
+            <p className="text-xl text-gray-400 mb-10 max-w-xl">
+              Pronađite svoj stil. Veličine 40-46.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/products"
+                className="inline-block bg-white text-gray-900 px-10 py-5 rounded-xl font-bold hover:bg-gray-100 transition-all transform hover:scale-105 hover:shadow-2xl text-center text-lg"
+              >
+                Pogledaj kolekciju
+              </Link>
+              <Link
+                href="/products?category=elegantne"
+                className="inline-block border-2 border-white text-white px-10 py-5 rounded-xl font-bold hover:bg-white hover:text-gray-900 transition-all transform hover:scale-105 text-center text-lg backdrop-blur-sm"
+              >
+                Elegantne cipele
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-          }} />
+        {/* Animated Particles */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-[20%] w-2 h-2 bg-white/20 rounded-full animate-ping" />
+          <div className="absolute top-40 right-[30%] w-3 h-3 bg-white/10 rounded-full animate-pulse" />
+          <div className="absolute bottom-32 left-[40%] w-2 h-2 bg-white/15 rounded-full animate-ping" style={{ animationDelay: '1s' }} />
         </div>
       </section>
 
