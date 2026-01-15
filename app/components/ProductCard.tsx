@@ -42,34 +42,34 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
       </Link>
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <Link href={`/products/${product.id}`}>
-          <h3 className="text-lg font-semibold text-gray-900 hover:text-gray-700 transition">
+          <h3 className="text-sm sm:text-lg font-semibold text-gray-900 hover:text-gray-700 transition">
             {product.name}
           </h3>
         </Link>
-        <p className="text-gray-500 text-sm mt-1">{product.brand}</p>
+        <p className="text-gray-500 text-xs sm:text-sm mt-1">{product.brand}</p>
         <div className="flex items-center justify-between mt-3">
           <div className="flex items-center space-x-2">
             {product.discount ? (
               <>
-                <span className="text-xl font-bold text-gray-900">
+                <span className="text-base sm:text-xl font-bold text-gray-900">
                   {Math.round(product.price * (1 - product.discount / 100))} DIN
                 </span>
-                <span className="text-sm text-gray-500 line-through">
+                <span className="text-xs sm:text-sm text-gray-500 line-through">
                   {product.price} DIN
                 </span>
               </>
             ) : (
-              <span className="text-xl font-bold text-gray-900">
+              <span className="text-base sm:text-xl font-bold text-gray-900">
                 {product.price} DIN
               </span>
             )}
           </div>
         </div>
 
-        <div className="mt-4">
-          <label className="block text-sm font-medium text-gray-900 mb-2">
+        <div className="mt-3 sm:mt-4">
+          <label className="block text-xs sm:text-sm font-medium text-gray-900 mb-1 sm:mb-2">
             Izaberite veličinu
           </label>
           <select
@@ -78,7 +78,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               setSelectedSize(Number(e.target.value));
               setShowSizeError(false);
             }}
-            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white ${
+            className={`w-full px-2 sm:px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white text-sm ${
               showSizeError ? "border-red-500" : "border-gray-300"
             }`}
           >
@@ -90,7 +90,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             ))}
           </select>
           {showSizeError && (
-            <p className="text-red-500 text-sm mt-1">
+            <p className="text-red-500 text-xs sm:text-sm mt-1">
               Molimo izaberite veličinu
             </p>
           )}
@@ -98,7 +98,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <button
           onClick={handleAddToCart}
-          className="w-full mt-4 bg-[#2d1810] text-white py-2 px-4 rounded-lg hover:bg-[#3d2817] transition-colors"
+          className="w-full mt-3 sm:mt-4 bg-[#2d1810] text-white py-2 px-2 sm:px-4 rounded-lg hover:bg-[#3d2817] transition-colors text-sm sm:text-base"
         >
           Dodaj u korpu
         </button>
