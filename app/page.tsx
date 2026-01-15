@@ -43,11 +43,12 @@ export default function Home() {
               </h1>
 
               <p className="text-2xl md:text-3xl text-gray-300 font-light max-w-2xl">
-                Kvalitetna obuća za savremenog muškarca
+                Neka vaši koraci pričaju o udobnosti.
               </p>
 
               <p className="text-lg text-gray-400 max-w-xl">
-                Pronađite svoj stil. Veličine 40-46. Besplatna dostava za sve porudžbine.
+                Pronađite svoj stil.<br />
+                Besplatna dostava za sve porudžbine.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -57,13 +58,6 @@ export default function Home() {
                 >
                   <span className="relative z-10">Pogledaj kolekciju</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-
-                <Link
-                  href="/products?category=elegantne"
-                  className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white border-2 border-white/30 rounded-xl backdrop-blur-sm hover:border-white hover:bg-white/10 transition-all hover:scale-105"
-                >
-                  Elegantne cipele
                 </Link>
               </div>
 
