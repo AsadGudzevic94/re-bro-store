@@ -13,7 +13,7 @@ export default function Home() {
         {/* Animated Background Shoes */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Shoe 1 - Top Right */}
-          <div className="absolute -top-20 right-[10%] opacity-10 animate-float">
+          <div className="absolute -top-20 right-[10%] opacity-30 animate-float">
             <img
               src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&q=80"
               alt=""
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
 
           {/* Shoe 2 - Middle Left */}
-          <div className="absolute top-1/4 -left-32 opacity-10 animate-float-delayed">
+          <div className="absolute top-1/4 -left-32 opacity-25 animate-float-delayed">
             <img
               src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600&q=80"
               alt=""
@@ -31,7 +31,7 @@ export default function Home() {
           </div>
 
           {/* Shoe 3 - Bottom Center */}
-          <div className="absolute bottom-0 right-[20%] opacity-10 animate-float-slow">
+          <div className="absolute bottom-0 right-[20%] opacity-25 animate-float-slow">
             <img
               src="https://images.unsplash.com/photo-1605733513597-8c034b65e3e8?w=600&q=80"
               alt=""
@@ -40,7 +40,7 @@ export default function Home() {
           </div>
 
           {/* Shoe 4 - Top Left Background */}
-          <div className="absolute top-10 left-[15%] opacity-5 animate-float-slow">
+          <div className="absolute top-10 left-[15%] opacity-15 animate-float-slow">
             <img
               src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&q=80"
               alt=""
@@ -49,8 +49,8 @@ export default function Home() {
           </div>
 
           {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/90" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/50 to-gray-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-900/70" />
         </div>
 
         {/* Content */}
