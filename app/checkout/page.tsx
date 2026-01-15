@@ -93,6 +93,42 @@ export default function CheckoutPage() {
     }
   };
 
+  const sendAdminNotification = async () => {
+    const orderItems = cartItems
+      .map(
+        (item) =>
+          `${item.product.name} (Vel: ${item.size}, Kol: ${item.quantity}) - ${Math.round(
+            (item.product.discount
+              ? item.product.price * (1 - item.product.discount / 100)
+              : item.product.price) * item.quantity
+          )} DIN`
+      )
+      .join("\n");
+
+    const adminTemplateParams = {
+      to_name: "Re-Bro Tim",
+      to_email: "info@re-bro.store",
+      customer_name: `${formData.firstName} ${formData.lastName}`,
+      customer_email: formData.email || "Nije unet",
+      customer_phone: formData.phone,
+      order_items: orderItems,
+      total_price: `${Math.round(totalPrice)} DIN`,
+      shipping_address: `${formData.address}, ${formData.postalCode} ${formData.city}`,
+    };
+
+    try {
+      await emailjs.send(
+        "service_cercg5u",
+        "template_x007xh2",
+        adminTemplateParams,
+        "5WiXOhqiN3g-48Pcy"
+      );
+      console.log("Admin obaveštenje poslano!");
+    } catch (error) {
+      console.log("Greška pri slanju admin obaveštenja:", error);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -100,10 +136,13 @@ export default function CheckoutPage() {
 
     setIsSubmitting(true);
 
-    // Pošalji email potvrdu ako je email unesen
+    // Pošalji email potvrdu korisniku ako je email unesen
     if (formData.email.trim()) {
       await sendEmailConfirmation();
     }
+
+    // UVEK pošalji obaveštenje adminu o novoj narudžbini
+    await sendAdminNotification();
 
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
