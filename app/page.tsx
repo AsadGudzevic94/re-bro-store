@@ -108,9 +108,9 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
           Kategorije
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Link
-            href="/products?category=elegantne"
+            href="/products?category=leto"
             className="relative group overflow-hidden rounded-lg shadow-lg h-64"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10" />
@@ -121,30 +121,13 @@ export default function Home() {
               }}
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-              <h3 className="text-2xl font-bold text-white">Elegantne</h3>
-              <p className="text-gray-200">Za poslovne i svečane prilike</p>
+              <h3 className="text-2xl font-bold text-white">Leto</h3>
+              <p className="text-gray-200">Lagane i prozračne cipele za toplu sezonu</p>
             </div>
           </Link>
 
           <Link
-            href="/products?category=casual"
-            className="relative group overflow-hidden rounded-lg shadow-lg h-64"
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10" />
-            <div
-              className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-              style={{
-                backgroundImage: "url('/7.jpg')",
-              }}
-            />
-            <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-              <h3 className="text-2xl font-bold text-white">Casual</h3>
-              <p className="text-gray-200">Za svakodnevno nošenje</p>
-            </div>
-          </Link>
-
-          <Link
-            href="/products?category=cizme"
+            href="/products?category=zima"
             className="relative group overflow-hidden rounded-lg shadow-lg h-64"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10" />
@@ -155,8 +138,8 @@ export default function Home() {
               }}
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-              <h3 className="text-2xl font-bold text-white">Čizme</h3>
-              <p className="text-gray-200">Za hladnije dane</p>
+              <h3 className="text-2xl font-bold text-white">Zima</h3>
+              <p className="text-gray-200">Tople i izdržljive čizme za hladnije dane</p>
             </div>
           </Link>
         </div>

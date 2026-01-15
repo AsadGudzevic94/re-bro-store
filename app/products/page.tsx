@@ -14,9 +14,8 @@ function ProductsContent() {
     : products;
 
   const categoryName = {
-    elegantne: "Elegantne cipele",
-    casual: "Casual cipele",
-    cizme: "Čizme",
+    leto: "Letnja kolekcija",
+    zima: "Zimska kolekcija",
   }[category || ""] || "Svi proizvodi";
 
   return (
@@ -43,34 +42,24 @@ function ProductsContent() {
             Sve
           </a>
           <a
-            href="/products?category=elegantne"
+            href="/products?category=leto"
             className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-              category === "elegantne"
+              category === "leto"
                 ? "bg-gray-900 text-white"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
-            Elegantne
+            Leto
           </a>
           <a
-            href="/products?category=casual"
+            href="/products?category=zima"
             className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-              category === "casual"
+              category === "zima"
                 ? "bg-gray-900 text-white"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
-            Casual
-          </a>
-          <a
-            href="/products?category=cizme"
-            className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-              category === "cizme"
-                ? "bg-gray-900 text-white"
-                : "bg-white text-gray-700 hover:bg-gray-100"
-            }`}
-          >
-            Čizme
+            Zima
           </a>
         </div>
 

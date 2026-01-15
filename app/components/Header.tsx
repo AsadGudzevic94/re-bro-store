@@ -35,14 +35,11 @@ export default function Header() {
             <Link href="/products" className="text-gray-700 hover:text-gray-900 transition">
               Svi Proizvodi
             </Link>
-            <Link href="/products?category=elegantne" className="text-gray-700 hover:text-gray-900 transition">
-              Elegantne
+            <Link href="/products?category=leto" className="text-gray-700 hover:text-gray-900 transition">
+              Leto
             </Link>
-            <Link href="/products?category=casual" className="text-gray-700 hover:text-gray-900 transition">
-              Casual
-            </Link>
-            <Link href="/products?category=cizme" className="text-gray-700 hover:text-gray-900 transition">
-              Čizme
+            <Link href="/products?category=zima" className="text-gray-700 hover:text-gray-900 transition">
+              Zima
             </Link>
           </div>
 
@@ -112,25 +109,18 @@ export default function Header() {
                 Svi Proizvodi
               </Link>
               <Link
-                href="/products?category=elegantne"
+                href="/products?category=leto"
                 className="text-gray-700 hover:text-gray-900 py-2 transition"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Elegantne
+                Leto
               </Link>
               <Link
-                href="/products?category=casual"
+                href="/products?category=zima"
                 className="text-gray-700 hover:text-gray-900 py-2 transition"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Casual
-              </Link>
-              <Link
-                href="/products?category=cizme"
-                className="text-gray-700 hover:text-gray-900 py-2 transition"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Čizme
+                Zima
               </Link>
             </div>
           </div>
