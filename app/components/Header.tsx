@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 
@@ -15,7 +16,14 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.jpg"
+              alt="Re-Bro Logo"
+              width={50}
+              height={50}
+              className="object-contain"
+            />
             <span className="text-2xl font-bold text-gray-900">Re-Bro</span>
           </Link>
 
