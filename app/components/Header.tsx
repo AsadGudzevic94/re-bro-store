@@ -14,17 +14,17 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex flex-col items-center gap-1 py-2">
             <Image
               src="/logo.jpg"
               alt="Re-Bro Logo"
-              width={50}
-              height={50}
+              width={60}
+              height={60}
               className="object-contain"
             />
-            <span className="text-2xl font-bold text-gray-900">Re-Bro</span>
+            <span className="text-sm font-bold text-gray-900 -mt-1">Re-Bro</span>
           </Link>
 
           {/* Desktop Navigation */}
