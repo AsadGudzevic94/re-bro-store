@@ -45,8 +45,8 @@ export default function Home() {
             <div className="relative hidden lg:block">
               <div className="relative animate-float">
                 <img
-                  src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80"
-                  alt="Premium Shoe"
+                  src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=800&q=80"
+                  alt="Elegantna muška cipela"
                   className="w-full max-w-lg mx-auto drop-shadow-2xl transform hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent rounded-lg" />
