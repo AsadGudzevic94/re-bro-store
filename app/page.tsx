@@ -9,31 +9,61 @@ export default function Home() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white">
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Re-Bro - Muška Obuća
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Pronađite savršene cipele za svaku priliku. Kvalitetna muška obuća
-              u veličinama 40-46. Elegantne, casual i zimske čizme.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/products"
-                className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center"
-              >
-                Pogledaj kolekciju
-              </Link>
-              <Link
-                href="/products?category=elegantne"
-                className="inline-block border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition text-center"
-              >
-                Elegantne cipele
-              </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="z-10">
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                  Re-Bro
+                </span>
+              </h1>
+              <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+                Kvalitetna obuća za savremenog muškarca
+              </p>
+              <p className="text-lg text-gray-400 mb-8">
+                Pronađite svoj stil. Veličine 40-46.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/products"
+                  className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 text-center shadow-lg"
+                >
+                  Pogledaj kolekciju
+                </Link>
+                <Link
+                  href="/products?category=elegantne"
+                  className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-gray-900 transition-all transform hover:scale-105 text-center"
+                >
+                  Elegantne cipele
+                </Link>
+              </div>
+            </div>
+
+            {/* Animated Shoe Image */}
+            <div className="relative hidden lg:block">
+              <div className="relative animate-float">
+                <img
+                  src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80"
+                  alt="Premium Shoe"
+                  className="w-full max-w-lg mx-auto drop-shadow-2xl transform hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/50 to-transparent rounded-lg" />
+              </div>
+
+              {/* Decorative Elements */}
+              <div className="absolute -top-10 -right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute -bottom-10 -left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000" />
             </div>
           </div>
+        </div>
+
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+          }} />
         </div>
       </section>
 
