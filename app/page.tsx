@@ -188,8 +188,8 @@ export default function Home() {
       {/* Features Section */}
       <section className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
+            <div className="p-3 sm:p-6">
               <div className="w-12 h-12 bg-[#2d1810] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   className="w-6 h-6 text-white"
