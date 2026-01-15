@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { Product } from "../data/products";
 import { useCart } from "../context/CartContext";
 
@@ -11,6 +12,18 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
+  const [selectedSize, setSelectedSize] = useState<number | null>(null);
+  const [showSizeError, setShowSizeError] = useState(false);
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      setShowSizeError(true);
+      return;
+    }
+    addToCart(product, selectedSize);
+    setSelectedSize(null);
+    setShowSizeError(false);
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -54,8 +67,37 @@ export default function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
         </div>
+
+        <div className="mt-4">
+          <label className="block text-sm font-medium text-gray-900 mb-2">
+            Izaberite veličinu
+          </label>
+          <select
+            value={selectedSize || ""}
+            onChange={(e) => {
+              setSelectedSize(Number(e.target.value));
+              setShowSizeError(false);
+            }}
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white ${
+              showSizeError ? "border-red-500" : "border-gray-300"
+            }`}
+          >
+            <option value="">Izaberite broj</option>
+            {product.sizes.map((size) => (
+              <option key={size} value={size}>
+                {size}
+              </option>
+            ))}
+          </select>
+          {showSizeError && (
+            <p className="text-red-500 text-sm mt-1">
+              Molimo izaberite veličinu
+            </p>
+          )}
+        </div>
+
         <button
-          onClick={() => addToCart(product)}
+          onClick={handleAddToCart}
           className="w-full mt-4 bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors"
         >
           Dodaj u korpu
