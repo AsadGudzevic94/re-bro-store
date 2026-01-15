@@ -128,7 +128,7 @@ export default function ProductPage() {
                       onClick={() => setSelectedSize(size)}
                       className={`w-12 h-12 rounded-lg border-2 flex items-center justify-center font-medium transition ${
                         selectedSize === size
-                          ? "border-gray-900 bg-gray-900 text-white"
+                          ? "border-gray-900 bg-[#2d1810] text-white"
                           : "border-gray-300 text-gray-900 hover:border-gray-400"
                       }`}
                     >
@@ -166,7 +166,7 @@ export default function ProductPage() {
                 className={`mt-8 w-full py-4 rounded-lg font-semibold text-lg transition ${
                   added
                     ? "bg-green-600 text-white"
-                    : "bg-gray-900 text-white hover:bg-gray-800"
+                    : "bg-[#2d1810] text-white hover:bg-[#3d2817]"
                 }`}
               >
                 {added ? "Dodano u korpu!" : "Dodaj u korpu"}

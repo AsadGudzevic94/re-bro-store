@@ -35,7 +35,7 @@ function ProductsContent() {
             href="/products"
             className={`px-4 py-2 rounded-full text-sm font-medium transition ${
               !category
-                ? "bg-gray-900 text-white"
+                ? "bg-[#2d1810] text-white"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
@@ -45,7 +45,7 @@ function ProductsContent() {
             href="/products?category=leto"
             className={`px-4 py-2 rounded-full text-sm font-medium transition ${
               category === "leto"
-                ? "bg-gray-900 text-white"
+                ? "bg-[#2d1810] text-white"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
@@ -55,7 +55,7 @@ function ProductsContent() {
             href="/products?category=zima"
             className={`px-4 py-2 rounded-full text-sm font-medium transition ${
               category === "zima"
-                ? "bg-gray-900 text-white"
+                ? "bg-[#2d1810] text-white"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >

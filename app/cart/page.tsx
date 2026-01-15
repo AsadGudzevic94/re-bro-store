@@ -33,7 +33,7 @@ export default function CartPage() {
           </p>
           <Link
             href="/products"
-            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
+            className="inline-block bg-[#2d1810] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#3d2817] transition"
           >
             Nastavi kupovinu
           </Link>
@@ -189,7 +189,7 @@ export default function CartPage() {
 
               <Link
                 href="/checkout"
-                className="block w-full mt-6 bg-gray-900 text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition text-center"
+                className="block w-full mt-6 bg-[#2d1810] text-white py-4 rounded-lg font-semibold hover:bg-[#3d2817] transition text-center"
               >
                 Nastavi na plaćanje
               </Link>

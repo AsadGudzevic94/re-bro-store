@@ -176,7 +176,7 @@ export default function CheckoutPage() {
           </p>
           <Link
             href="/products"
-            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
+            className="inline-block bg-[#2d1810] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#3d2817] transition"
           >
             Pogledaj proizvode
           </Link>
@@ -235,7 +235,7 @@ export default function CheckoutPage() {
           </div>
           <Link
             href="/"
-            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
+            className="inline-block bg-[#2d1810] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#3d2817] transition"
           >
             Povratak na početnu
           </Link>
@@ -271,7 +271,7 @@ export default function CheckoutPage() {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white ${
                       errors.firstName ? "border-red-500" : "border-gray-300"
                     }`}
                     placeholder="Unesite ime"
@@ -294,7 +294,7 @@ export default function CheckoutPage() {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white ${
                       errors.lastName ? "border-red-500" : "border-gray-300"
                     }`}
                     placeholder="Unesite prezime"
@@ -318,7 +318,7 @@ export default function CheckoutPage() {
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white ${
                     errors.address ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="Ulica i broj"
@@ -342,7 +342,7 @@ export default function CheckoutPage() {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white ${
                       errors.city ? "border-red-500" : "border-gray-300"
                     }`}
                     placeholder="Unesite grad"
@@ -365,7 +365,7 @@ export default function CheckoutPage() {
                     name="postalCode"
                     value={formData.postalCode}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white ${
                       errors.postalCode ? "border-red-500" : "border-gray-300"
                     }`}
                     placeholder="11000"
@@ -389,7 +389,7 @@ export default function CheckoutPage() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white ${
                     errors.phone ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="061 123 456"
@@ -412,7 +412,7 @@ export default function CheckoutPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white"
                   placeholder="email@primjer.com"
                 />
                 <p className="text-gray-500 text-xs mt-1">
@@ -424,7 +424,7 @@ export default function CheckoutPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gray-900 text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  className="w-full bg-[#2d1810] text-white py-4 rounded-lg font-semibold hover:bg-[#3d2817] transition disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Obrađujem narudžbu..." : "Potvrdi narudžbu"}
                 </button>

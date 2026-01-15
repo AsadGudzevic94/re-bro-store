@@ -78,7 +78,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               setSelectedSize(Number(e.target.value));
               setShowSizeError(false);
             }}
-            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 bg-white ${
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2d1810] focus:border-transparent text-gray-900 bg-white ${
               showSizeError ? "border-red-500" : "border-gray-300"
             }`}
           >
@@ -98,7 +98,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <button
           onClick={handleAddToCart}
-          className="w-full mt-4 bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors"
+          className="w-full mt-4 bg-[#2d1810] text-white py-2 px-4 rounded-lg hover:bg-[#3d2817] transition-colors"
         >
           Dodaj u korpu
         </button>

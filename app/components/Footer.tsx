@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-[#2d1810] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -42,7 +42,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>Email: info@re-bro.store</li>
               <li>Tel: +381 63 722 6424</li>
-              <li>Lokacija: Bosna i Hercegovina</li>
+              <li>Adresa: Novi Pazar, Srbija</li>
             </ul>
           </div>
         </div>

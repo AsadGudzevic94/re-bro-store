@@ -190,7 +190,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="p-6">
-              <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-[#2d1810] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   className="w-6 h-6 text-white"
                   fill="none"
@@ -212,7 +212,7 @@ export default function Home() {
             </div>
 
             <div className="p-6">
-              <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-[#2d1810] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   className="w-6 h-6 text-white"
                   fill="none"
@@ -234,7 +234,7 @@ export default function Home() {
             </div>
 
             <div className="p-6">
-              <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-[#2d1810] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   className="w-6 h-6 text-white"
                   fill="none"
@@ -256,7 +256,7 @@ export default function Home() {
             </div>
 
             <div className="p-6">
-              <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-[#2d1810] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   className="w-6 h-6 text-white"
                   fill="none"
