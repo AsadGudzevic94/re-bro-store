@@ -10,7 +10,7 @@ export default function Footer() {
             <h2 className="text-2xl font-bold mb-4">Re-Bro</h2>
             <p className="text-gray-400 mb-4">
               Vaša omiljena destinacija za kvalitetnu mušku obuću. Nudimo širok izbor
-              elegantnih, casual i zimskih cipela u veličinama 40-46.
+              ljetnih i zimskih cipela u veličinama 40-46.
             </p>
           </div>
 
@@ -40,9 +40,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: info@re-bro.com</li>
-              <li>Tel: +387 33 123 456</li>
-              <li>Adresa: Sarajevo, BiH</li>
+              <li>Email: info@re-bro.store</li>
+              <li>Tel: +381 63 722 6424</li>
+              <li>Lokacija: Bosna i Hercegovina</li>
             </ul>
           </div>
         </div>
