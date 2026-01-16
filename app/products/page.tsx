@@ -1,13 +1,29 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
 
 function ProductsContent() {
   const searchParams = useSearchParams();
   const category = searchParams.get("category");
+
+  // Sačuvaj i restauriraj scroll poziciju
+  useEffect(() => {
+    const savedPosition = sessionStorage.getItem("productsScrollPosition");
+    if (savedPosition) {
+      window.scrollTo(0, parseInt(savedPosition));
+      sessionStorage.removeItem("productsScrollPosition");
+    }
+
+    const handleScroll = () => {
+      sessionStorage.setItem("productsScrollPosition", window.scrollY.toString());
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const filteredProducts = category
     ? products.filter((p) => p.category === category)
