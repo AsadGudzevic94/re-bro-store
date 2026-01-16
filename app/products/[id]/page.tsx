@@ -65,7 +65,7 @@ export default function ProductPage() {
             </li>
             <li>/</li>
             <li>
-              <Link href="/products" className="hover:text-gray-900">
+              <Link href="/products" scroll={false} className="hover:text-gray-900">
                 Proizvodi
               </Link>
             </li>
